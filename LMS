@@ -1,0 +1,13 @@
+print("Welcome to Takeo Library Management System")
+
+menu_number = int(input("Choose Menu Number to show: 1 For Admin Menu, 2 for Borrower Menu "))
+
+if menu_number == 1:
+    print("Admin Menu")
+elif menu_number == 2:
+    print("Borrower Menu")
+else:
+    print("Wrong Input")
+    
+def __init__(self,admin_menu):
+    
