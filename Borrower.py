@@ -1,6 +1,7 @@
 import csv
 
 
+ 
 class Member():
     
     

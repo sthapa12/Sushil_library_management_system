@@ -1,7 +1,8 @@
 from books import Book
 from Borrower import Member
 def selection_validate():
-
+ 
+ 
     valid_selections = ('1', '2', '3', '4', '5', '6')
     message = input("Welcome to the main menu. Press enter to continue: ")
     loop = 'yes'
