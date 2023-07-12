@@ -43,20 +43,36 @@ def selection_calls():
         membership_id = input("Enter Membership ID: ")
         
         new_member = Member(name=name, email=email, address=address, city=city, zip_code=zip_code, membership_id=membership_id)
-        new_member.add_member
+        new_member.add_member()
     
     elif selection == '5':
-        email = input("Enter Membership ID: ")
+        membership_id = input("Enter Membership ID: ")
         member_update = Member(None, None, None, None, None, None)
         found = member_update.search_member_by_membership_id(membership_id)
-        
-        if found: 
+        if found:
             print("Member found. ")
             name = input("Enter new user name: ")
-        membership_id = input("Enter Membership ID: ")
+            email = input("Enter Member Email: ")
+            address = input("Enter Member Address: ")
+            city = input("Enter Member City: ")
+            zip_code = input("Enter Member Zip-Code: ")
+            updated_member = Member(name, email, address, city, zip_code, membership_id)
+            updated_member.update_member()
+        else:
+            print("Member not found.")     
+         
         
-        new_member = Member(name=name, email=email, address=address, city=city, zip_code=zip_code, membership_id=membership_id)
-        new_member.add_member
+        # if found: 
+        #     print("Member found. ")
+        #     name = input("Enter Member's New name: ")
+        #     email = input("Enter Member's New Email: ")
+        #     address = input("Enter Member's New Email: ")
+        #     city = input("Enter Member's New city: ")
+        #     zip_code = input("Enter Member Zip-Code: ")
+        #     membership_id = input("Enter Membership ID: ")
+        # else:
+        #     new_member = Member(name=name, email=email, address=address, city=city, zip_code=zip_code, membership_id=membership_id)
+        #     new_member.update_member()
 
 # user_name, email, address, city, zip_code, membership_id
 
